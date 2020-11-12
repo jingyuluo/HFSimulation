@@ -14,10 +14,6 @@ parser.add_argument('-o', "--output", default="", help="The output directory for
 parser.add_argument("-a","--abs", default=False, action="store_true", help="use absolute path") 
 parser.add_argument("-r","--reweight", default="", help="The pileup reweight function")
 parser.add_argument("-e","--eos", default="", help="EOS path to copy to")
-parser.add_argument("--r3mm", default=False, action="store_true", help="Reweight 1mm sample to 3mm sample")
-parser.add_argument("--r30mm", default=False, action="store_true", help="Reweight 10mm sample to 30mm sample")
-parser.add_argument("--r300mm", default=False, action="store_true", help="Reweight 100mm sample to 300mm sample")
-parser.add_argument("--r3000mm", default=False, action="store_true", help="Reweight 1000mm sample to 3000mm sample")
 parser.add_argument("-p", "--perjob", default=10, type=int, help="Files per job")
 parser.add_argument("-s", "--sub", default=False, action="store_true")
 
@@ -78,25 +74,6 @@ for key in filegroups.keys():
     else:
         REWEIGHT='--reweight='
     
-    if args.r3mm:
-        R3MM = "--r3mm"
-    else: 
-        R3MM = ""
-    
-    if args.r30mm:
-        R30MM = "--r30mm"
-    else:
-        R30MM = ""
-
-    if args.r300mm:
-        R300MM = "--r300mm"
-    else:
-        R300MM = ""
-
-    if args.r3000mm:
-        R3000MM = "--r3000mm"
-    else: 
-        R3000MM = ""
 
     condor_filename="analyze_condor_{0}".format(folder0)
     fcondor=open(condor_filename, "w")
