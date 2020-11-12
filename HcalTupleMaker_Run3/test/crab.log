@@ -1,0 +1,80 @@
+DEBUG 2020-02-23 15:26:58.262 UTC: 	 Running on: Linux cmslpc132.fnal.gov 3.10.0-1062.9.1.el7.x86_64 #1 SMP Thu Dec 5 14:44:59 CST 2019 x86_64 x86_64 x86_64 GNU/Linux - Scientific Linux 7.7 (Nitrogen)
+DEBUG 2020-02-23 15:26:58.273 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-02-23 15:26:58.273 UTC: 	 Executing command: 'submit'
+DEBUG 2020-02-23 15:26:58.274 UTC: 	 Found CRAB cache file /uscms/home/jluo/.crab3
+DEBUG 2020-02-23 15:26:58.287 UTC: 	 Checking credentials
+DEBUG 2020-02-23 15:26:58.288 UTC: 	 Found proxy file /uscms/home/jluo/x509up_u50178
+DEBUG 2020-02-23 15:26:58.288 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-23 15:26:58.390 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/jluo/x509up_u50178 -timeleft
+ output : 43160
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-23 15:26:58.492 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/jluo/x509up_u50178 -actimeleft
+ output : 43160
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-23 15:26:58.492 UTC: 	 Proxy valid for 11:59:20 hours
+INFO 2020-02-23 15:26:58.492 UTC: 	 Will use CRAB configuration file crabConfig_HFSim_Global_RAW_cfg.py
+DEBUG 2020-02-23 15:26:58.492 UTC: 	 Loading CRAB configuration file.
+DEBUG 2020-02-23 15:26:58.498 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2020-02-23 15:26:58.498 UTC: 	 Invalid CRAB configuration:
+ when ignoreLocality is set a valid site white list must be specified using the Site.whitelist parameter
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2020-02-23 15:26:58.498 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 35, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 320, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 93, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Invalid CRAB configuration:
+ when ignoreLocality is set a valid site white list must be specified using the Site.whitelist parameter
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2020-02-23 15:27:52.664 UTC: 	 Running on: Linux cmslpc132.fnal.gov 3.10.0-1062.9.1.el7.x86_64 #1 SMP Thu Dec 5 14:44:59 CST 2019 x86_64 x86_64 x86_64 GNU/Linux - Scientific Linux 7.7 (Nitrogen)
+DEBUG 2020-02-23 15:27:52.677 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-02-23 15:27:52.677 UTC: 	 Executing command: 'submit'
+DEBUG 2020-02-23 15:27:52.678 UTC: 	 Found CRAB cache file /uscms/home/jluo/.crab3
+DEBUG 2020-02-23 15:27:52.685 UTC: 	 Checking credentials
+DEBUG 2020-02-23 15:27:52.685 UTC: 	 Found proxy file /uscms/home/jluo/x509up_u50178
+DEBUG 2020-02-23 15:27:52.685 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-23 15:27:52.789 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/jluo/x509up_u50178 -timeleft
+ output : 43106
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-23 15:27:52.893 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/jluo/x509up_u50178 -actimeleft
+ output : 43106
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-23 15:27:52.893 UTC: 	 Proxy valid for 11:58:26 hours
+INFO 2020-02-23 15:27:52.893 UTC: 	 Will use CRAB configuration file crabConfig_HFSim_Global_RAW_cfg.py
+DEBUG 2020-02-23 15:27:52.894 UTC: 	 Loading CRAB configuration file.
+DEBUG 2020-02-23 15:27:52.904 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2020-02-23 15:27:52.905 UTC: 	 Working area '/uscms_data/d3/jluo/work/CMSSW_dir/CMSSW_10_6_4/src/HCALPFG/HcalTupleMaker/test/out_crab/crab_HFSim_Run3_Ntuple' already exists 
+Please change the requestName in the config file
+ERROR 2020-02-23 15:27:52.905 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 35, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 324, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 418, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/uscms_data/d3/jluo/work/CMSSW_dir/CMSSW_10_6_4/src/HCALPFG/HcalTupleMaker/test/out_crab/crab_HFSim_Run3_Ntuple' already exists 
+Please change the requestName in the config file
