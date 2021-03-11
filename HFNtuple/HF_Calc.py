@@ -9,13 +9,20 @@ parser = argparse.ArgumentParser(description="Produce HF Lumi")
 
 parser.add_argument("-f", "--file", default="", help="The path the file")
 parser.add_argument("-o", "--output", default="", help="The name of the output file")
+parser.add_argument("-d", "--depth", default="1", help="The depth of the fiber: 1, long; 2, short")
 args = parser.parse_args()
 
-filename = args.file
-print "Filename", filename
-tfile = ROOT.TFile.Open(filename)
 
-ttree = tfile.Get("hcalTupleTree/tree")
+depth = int(args.depth)
+filenames = args.file.split(",")
+print "File names", filenames
+#tfile = ROOT.TFile.Open(filename)
+
+ttree = ROOT.TChain("hcalTupleTree/tree")
+for filename in filenames:
+    ttree.AddFile(filename)
+
+#ttree = tfile.Get("hcalTupleTree/tree")
 
 nevts = ttree.GetEntries()
 
@@ -57,7 +64,7 @@ for ievt in range(nevts):
                 etsum+=ttree.QIE10DigiFC.at(ieta).at(ich)
                 if ttree.QIE10DigiADC.at(ieta).at(ich)>7:
                     etsum_sub+=ttree.QIE10DigiFC.at(ieta).at(ich)
-        
+                if ttree.QIE10DigiDepth.at(ieta)!=depth: continue        
                 if curreta==31:
                     ADC_31[N31] = ttree.QIE10DigiADC.at(ieta).at(ich)
                     N31+=1

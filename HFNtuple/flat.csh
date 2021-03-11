@@ -31,7 +31,7 @@ cd $current
 #eosmkdir -p $5
 setenv LD_LIBRARY_PATH $ROOTSYS/lib/:$LD_LIBRARY_PATH
 echo $LD_LIBRARY_PATH
-python $1 -f $2 -o $3  
+python $1 -f $2 -o $3  $5 
 #rm new_ratio_likelihood_inclusive.root
 #rm Run2016G_PUMoriond17.root
 #rm Pileup_reweight_2017.root 
